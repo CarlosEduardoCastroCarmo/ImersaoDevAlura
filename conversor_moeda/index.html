@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/conversor_moeda/Styles/reset.css">
+  <link rel="stylesheet" href="/conversor_moeda/Styles/style.css">
+  <title>Conversor de moedas</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="page-title">
+      Conversor de moedas
+    </h1>
+    <p id="page-sub-title">
+      Descubra os valores em reais
+    </p>
+    <label for="moeda" id="inputLabel">Insira o valor: </label>
+    <form action="">
+      <input type="number" id="valor" size="2" placeholder="Insira o valor: ">
+    </form>
+    <button type="submit" id="converter">Converter</button>
+    <h2 id="valorConvertido"></h2>
+    <h2 id="valorConvertido2"></h2>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

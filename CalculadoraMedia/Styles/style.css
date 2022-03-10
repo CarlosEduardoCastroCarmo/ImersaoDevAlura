@@ -1,0 +1,87 @@
+html, 
+body{
+  height: 100%;
+}
+
+
+body{
+  background-color: #222;
+  padding-top: 2rem;
+  color: #eee;
+  font-family: "Press Start 2P", cursive;
+  align-items: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+label{
+  font-size: 1.4rem;
+}
+
+input{
+  box-sizing: border-box;
+  font: inherit;
+  background-color: black;
+  font-size: 1.2rem;
+  padding: 1rem 0.5rem;
+  border: 0.4rem solid white;
+  color: #eee; 
+  width: 24rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+button{
+  width: 24rem;
+  box-sizing: border-box;
+  height: 4rem;
+  font: inherit;
+  font-size: 1.2rem;
+  background-color: #209cee;
+  border: 0.3rem solid white;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+button:hover{
+  transform: scale(1.08);
+}
+
+button:active{
+  background-color: #220fff;
+}
+
+ol{
+  margin: 15px 0 0 0;
+  border: 0.4rem solid #333;
+}
+
+li{
+  font-size:1.2rem;
+  text-align: center;
+  padding: 15px;
+}
+
+li:nth-child(even){
+  background-color: #333;
+}
+
+h2{
+  margin-bottom: 1.2rem;
+}
