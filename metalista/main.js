@@ -46,7 +46,7 @@ function ContarTentativas(event){
         $resultado.innerHTML = ' ';
         $button.disabled = true;  
         setTimeout(function(){
-            location.reload(1)
+            location.reload()
         }, 3000 );
         totalTentativas = 3;
     }
