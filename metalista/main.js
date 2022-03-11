@@ -8,40 +8,52 @@ var totalTentativas = 3;
 var numeroRandomico = parseInt(Math.random()*11);
 
 function Mentalista(event){
+
     event.preventDefault();
 
     qtdTentativas = totalTentativas - 1;
 
     var valorIput = parseInt($input.value);
     if(valorIput > 10){
-        $resultado.innerHTML = "Tentativa inválida, número informado é maior que 10!"
+        $resultado.innerHTML = "Tentativa inválida, número informado é maior que 10!";
     }
     else if(numeroRandomico != valorIput && valorIput < numeroRandomico){
-        $resultado.innerHTML = "Voce errou, o número informado é menor que nosso numero secreto"
+        $resultado.innerHTML = "Voce errou, o número informado é menor que nosso numero secreto";
     }
     else if(numeroRandomico != valorIput && valorIput > numeroRandomico){
-        $resultado.innerHTML = "Voce errou, o número informado é maior que nosso numero secreto"
+        $resultado.innerHTML = "Voce errou, o número informado é maior que nosso numero secreto";
     }
     else if(valorIput == numeroRandomico){
-        $resultado.innerHTML = "Uooow, parece que temos um vencedor. Parabéns, você acertou!!"
-    }
+        $resultado.innerHTML = "Uooow, parece que temos um vencedor. Parabéns, você acertou!!";
+
+        $button.disabled = true;  
+        setTimeout(function(){
+            location.reload(1)
+        }, 3000 );
+   }
     else{
-        $resultado.innerHTML = "Campo Input está vazio!"
+        $resultado.innerHTML = "Campo Input está vazio!";
     }    
 }
 
 function ContarTentativas(event){
     event.preventDefault();
 
-    totalTentativas -= 1;
-
-    if(totalTentativas < 0){
-        $tentativas.innerHTML = "Voce perdeu, suas tentativas foram esgotadas!"
-        totalTentativas = 3;        
+    if(totalTentativas < 0)
+    {
+        $tentativas.innerHTML = "Você perdeu, suas tentativas foram esgotadas!";
+        $tentativas.innerHTML = "Você perdeu. O número secreto era: " + numeroRandomico + ", recarregando desafio";  
+        $resultado.innerHTML = ' ';
+        $button.disabled = true;  
+        setTimeout(function(){
+            location.reload(1)
+        }, 3000 );
+        totalTentativas = 3;
     }
     else{
         $tentativas.innerHTML = "Tentativas restantes: " + totalTentativas;
-    }    
+    }
+    totalTentativas -= 1;    
 }
 
 $button.addEventListener("click", Mentalista);

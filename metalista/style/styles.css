@@ -1,6 +1,6 @@
 body{
     min-height: 600px;
-    background-color: black;
+    background-color: #121212;
     font-family: 'Press Start 2P', cursive;
 }
 span{
@@ -38,7 +38,7 @@ form{
     padding: inherit;
     border: 5px solid white;
     width: 30%;
-    height: 60%;
+    height: 56%;
     margin-top: 50px;
     border-radius: 15px;
     background-color: #f7d51d;
@@ -74,7 +74,7 @@ form{
 
 #resultado{
     color:white;
-    margin-top: 40px;
+    margin-top: 35px;
     line-height: 30px;
 }
 
@@ -82,5 +82,12 @@ form{
     color:white;
     margin-top: 10px;
     line-height: 30px;
+}
+
+.alura-logo{
+    position: absolute;
+    right: 15px;
+    top: 0px;;
+    padding: 12px;
 }
 
